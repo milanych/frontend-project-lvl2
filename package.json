@@ -1,0 +1,24 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "Second frontend project",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx jest --bail"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/milanych/frontend-project-lvl2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/milanych/frontend-project-lvl2/issues"
+  },
+  "type": "commonjs",
+  "homepage": "https://github.com/milanych/frontend-project-lvl2#readme",
+  "dependencies": {
+    "commander": "^8.0.0",
+    "eslint": "^7.30.0"
+  }
+}
