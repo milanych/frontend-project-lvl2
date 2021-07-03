@@ -19,7 +19,7 @@
     "url": "https://github.com/milanych/frontend-project-lvl2/issues"
   },
   "homepage": "https://github.com/milanych/frontend-project-lvl2#readme",
-  "dependencies": {
+  "devDependencies": {
     "commander": "^8.0.0",
     "eslint": "^7.30.0",
     "eslint-config-airbnb-base": "^14.2.1",
