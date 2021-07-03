@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const { Command } = require('commander');
+
 const program = new Command();
 
 program
@@ -9,6 +10,6 @@ program
   .usage('Usage: gendiff [options] <filepath1> <filepath2>')
   .option('-h, --help', 'output usage information.')
   .option('-V, --version', 'output the version number.')
-  .option('-f, --format [type]', 'output format.')
+  .option('-f, --format [type]', 'output format.');
 
-program.parse(process.argv)
+program.parse(process.argv);
