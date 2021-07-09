@@ -14,23 +14,18 @@ const genDiff = (firstObj, secondObj) => {
   const secondObjKeys = Object.keys(file2);
   const combinedObj = { ...file1, ...file2 };
   const combinedObjEntries = Object.entries(combinedObj).sort();
-  // eslint-disable-next-line no-restricted-syntax
   const result = {};
   // eslint-disable-next-line no-restricted-syntax
   for (const [key, value] of combinedObjEntries) {
     if (firstObjKeys.includes(key) && secondObjKeys.includes(key) && file1[key] === value) {
       result[` ${key}`] = file1[key];
     } else if (!firstObjKeys.includes(key)) {
-      // result += `+ ${key}: ${result[key] = value}\n`;
       result[`+ ${key}`] = file2[key];
     } else if (firstObjKeys.includes(key) && secondObjKeys.includes(key) && file1[key] !== value) {
       result[`- ${key}`] = file1[key];
-      // result += `- ${key}: ${result[key] = file1[key]}\n`;
       result[`+ ${key}`] = file2[key];
-      // result += `+ ${key}: ${result[key] = file2[key]}\n`;
     } else if (firstObjKeys.includes(key) && !secondObjKeys.includes(key)) {
       result[`- ${key}`] = file1[key];
-      // result += `- ${key}: ${result[key] = file1[key]}\n`;
     }
   }
   return result;
