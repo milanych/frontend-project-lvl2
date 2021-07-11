@@ -28,7 +28,7 @@ const genDiff = (firstObj, secondObj) => {
       result[`- ${key}`] = file1[key];
     }
   }
-  const toString = JSON.stringify(result, null, '  ');
+  const toString = JSON.stringify(result, null, '   ');
   return toString.replace(/["']/g, '');
 };
 export default genDiff;
