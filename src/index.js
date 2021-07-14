@@ -7,6 +7,8 @@ const readJSON = (file) => {
   return parseFile;
 };
 
+const isNull = (atr) => (atr === null ? null : 'not null');
+
 const genDiff = (firstObj, secondObj) => {
   const file1 = readJSON(firstObj);
   const file2 = readJSON(secondObj);
@@ -31,4 +33,5 @@ const genDiff = (firstObj, secondObj) => {
   const toString = JSON.stringify(result, null, '   ');
   return toString.replace(/["']/g, '');
 };
+export { isNull };
 export default genDiff;

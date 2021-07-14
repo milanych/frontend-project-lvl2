@@ -1,5 +1,6 @@
-import genDiff from '../src/index.js';
+import { isNull } from '../src/index.js';
 
-test('genDiff', () => {
-  expect(genDiff(file1, file2)).toBe(null);
+test('isNull', () => {
+  expect(isNull(null)).toBe(null);
+  expect(isNull(1)).not.toBe(null);
 });
