@@ -1,13 +1,4 @@
-import { readFileSync } from 'fs';
-import path from 'path';
-
-const readJSON = (file) => {
-  const readFile = readFileSync(path.resolve(file), 'utf-8');
-  const parseFile = JSON.parse(readFile);
-  return parseFile;
-};
-
-const isNull = (atr) => (atr === null ? null : 'not null');
+import readJSON from './reader.js';
 
 const genDiff = (firstObj, secondObj) => {
   const file1 = readJSON(firstObj);
@@ -33,5 +24,4 @@ const genDiff = (firstObj, secondObj) => {
   const toString = JSON.stringify(result, null, '   ');
   return toString.replace(/["']/g, '');
 };
-export { isNull };
 export default genDiff;
