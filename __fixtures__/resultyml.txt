@@ -2,7 +2,7 @@
    - Clark: Evans,
    - Ingy: döt Net,
    - Oren: Ben-Kiki,
-   + host: hexlet.io,
-   + timeout: 20,
-   + verbose: true
+   + aardvark: African pig-like ant eater. Ugly.,
+   + anaconda: South-American constrictor snake. Scaly.,
+   + anteater: South-American ant eater. Two species.
 }
