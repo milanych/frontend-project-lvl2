@@ -4,3 +4,6 @@
 
 ## Gendiff example
 [![asciicast](https://asciinema.org/a/mhriB8aolThLdm4Mv2XtYa4hQ.svg)](https://asciinema.org/a/mhriB8aolThLdm4Mv2XtYa4hQ)
+
+## yaml and json comparison
+https://asciinema.org/a/lg6X3sPV2EukiVc4A3ijd1Fws

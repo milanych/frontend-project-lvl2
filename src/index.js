@@ -1,8 +1,8 @@
-import readJSON from './reader.js';
+import parser from './parsers.js';
 
 const genDiff = (firstObj, secondObj) => {
-  const file1 = readJSON(firstObj);
-  const file2 = readJSON(secondObj);
+  const file1 = parser(firstObj);
+  const file2 = parser(secondObj);
   const firstObjKeys = Object.keys(file1);
   const secondObjKeys = Object.keys(file2);
   const combinedObj = { ...file1, ...file2 };

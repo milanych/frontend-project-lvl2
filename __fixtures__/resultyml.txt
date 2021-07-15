@@ -1,0 +1,8 @@
+{
+   - Clark: Evans,
+   - Ingy: döt Net,
+   - Oren: Ben-Kiki,
+   + host: hexlet.io,
+   + timeout: 20,
+   + verbose: true
+}
