@@ -6,4 +6,4 @@
 [![asciicast](https://asciinema.org/a/mhriB8aolThLdm4Mv2XtYa4hQ.svg)](https://asciinema.org/a/mhriB8aolThLdm4Mv2XtYa4hQ)
 
 ## yaml and json comparison
-[![asciicast](https://asciinema.org/a/lg6X3sPV2EukiVc4A3ijd1Fws.svg)](https://asciinema.org/a/lg6X3sPV2EukiVc4A3ijd1Fws)
+[![asciicast](https://asciinema.org/a/40Hp7OJI9fyrQy8OeBBnr2227.svg)](https://asciinema.org/a/40Hp7OJI9fyrQy8OeBBnr2227)
