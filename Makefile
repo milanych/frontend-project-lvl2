@@ -1,7 +1,9 @@
 install:
 	npm install
-gendiff:
-	node bin/gendiff.js
+json:
+	node bin/gendiff.js __fixtures__/file1.json __fixtures__/file2.json
+yml:
+	node bin/gendiff.js __fixtures__/file1.yml __fixtures__/file2.yml
 lint:
 	npx eslint --fix .
 test:
