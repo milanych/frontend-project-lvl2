@@ -1,8 +1,8 @@
 {
-  - Clark: Evans
-  - Ingy: döt Net
-  - Oren: Ben-Kiki
-  + aardvark: African pig-like ant eater. Ugly.
-  + anaconda: South-American constrictor snake. Scaly.
-  + anteater: South-American ant eater. Two species.
+    - Clark: Evans
+    - Ingy: döt Net
+    - Oren: Ben-Kiki
+    + aardvark: African pig-like ant eater. Ugly.
+    + anaconda: South-American constrictor snake. Scaly.
+    + anteater: South-American ant eater. Two species.
 }
