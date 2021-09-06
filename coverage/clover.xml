@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1630958449796" clover="3.2.0">
-  <project timestamp="1630958449797" name="All files">
-    <metrics statements="135" coveredstatements="130" conditionals="61" coveredconditionals="59" methods="11" coveredmethods="11" elements="207" coveredelements="200" complexity="0" loc="135" ncloc="135" packages="2" files="7" classes="7"/>
+<coverage generated="1630959970652" clover="3.2.0">
+  <project timestamp="1630959970652" name="All files">
+    <metrics statements="139" coveredstatements="134" conditionals="61" coveredconditionals="59" methods="11" coveredmethods="11" elements="211" coveredelements="204" complexity="0" loc="139" ncloc="139" packages="2" files="7" classes="7"/>
     <package name="src">
-      <metrics statements="42" coveredstatements="42" conditionals="17" coveredconditionals="17" methods="3" coveredmethods="3"/>
+      <metrics statements="46" coveredstatements="46" conditionals="17" coveredconditionals="17" methods="3" coveredmethods="3"/>
       <file name="index.js" path="/mnt/c/Users/Vzotov/Documents/JS Projects/frontend-project-lvl2/src/index.js">
         <metrics statements="31" coveredstatements="31" conditionals="13" coveredconditionals="13" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="cond" truecount="1" falsecount="0"/>
@@ -39,18 +39,22 @@
         <line num="31" count="1" type="stmt"/>
       </file>
       <file name="parsers.js" path="/mnt/c/Users/Vzotov/Documents/JS Projects/frontend-project-lvl2/src/parsers.js">
-        <metrics statements="11" coveredstatements="11" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <metrics statements="15" coveredstatements="15" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="cond" truecount="2" falsecount="0"/>
         <line num="2" count="6" type="stmt"/>
         <line num="3" count="6" type="stmt"/>
         <line num="4" count="6" type="stmt"/>
         <line num="5" count="6" type="stmt"/>
-        <line num="6" count="6" type="cond" truecount="2" falsecount="0"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
+        <line num="6" count="6" type="cond" truecount="1" falsecount="0"/>
+        <line num="7" count="6" type="cond" truecount="1" falsecount="0"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="10" count="6" type="stmt"/>
         <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.formatters">
