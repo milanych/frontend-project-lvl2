@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import parser from './parsers.js';
-import format from './format/index.js';
+import format from './formatters/index.js';
 
 const createTree = (obj1, obj2) => {
   const keys = Object.keys({ ...obj1, ...obj2 });

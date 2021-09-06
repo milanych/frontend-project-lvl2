@@ -7,3 +7,6 @@
 
 ## yaml and json comparison
 [![asciicast](https://asciinema.org/a/40Hp7OJI9fyrQy8OeBBnr2227.svg)](https://asciinema.org/a/40Hp7OJI9fyrQy8OeBBnr2227)
+
+## plain file
+[![asciicast](https://asciinema.org/a/8uACrYvvSNIaRr6gC0bIuMSeZ.svg)](https://asciinema.org/a/8uACrYvvSNIaRr6gC0bIuMSeZ)
