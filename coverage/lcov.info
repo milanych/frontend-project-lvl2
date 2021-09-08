@@ -70,7 +70,7 @@ DA:6,6
 DA:7,6
 DA:8,2
 DA:9,2
-DA:10,6
+DA:10,2
 DA:11,1
 DA:12,1
 DA:13,1
@@ -82,7 +82,8 @@ BRDA:1,0,0,1
 BRDA:1,1,0,6
 BRDA:6,2,0,4
 BRDA:7,3,0,2
-BRF:4
+BRDA:9,4,0,0
+BRF:5
 BRH:4
 end_of_record
 TN:
