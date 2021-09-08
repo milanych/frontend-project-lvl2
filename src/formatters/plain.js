@@ -4,15 +4,14 @@ const plain = (data) => {
     .map((node) => {
       const property = parent ? `${parent}.${node[1].key}` : node[1].key;
       const isObject = (obj) => {
-        let result = obj;
         if (typeof obj === 'object' && obj !== null) {
-          result = '[complex value]';
-        } else if (typeof obj === 'string') {
-          result = `'${obj}'`;
-        } else if (obj === null) {
-          result = null;
+          return '[complex value]';
+        } if (typeof obj === 'string') {
+          return `'${obj}'`;
+        } if (obj === null) {
+          return null;
         }
-        return result;
+        return obj;
       };
       if (node[1].val === null) { return null; }
       if (node[0] === 'add') {
