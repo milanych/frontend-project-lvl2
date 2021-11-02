@@ -1,24 +1,26 @@
 import _ from 'lodash';
 
-const buildTree = (obj1, obj2) => {
-  const keys = Object.keys({ ...obj1, ...obj2 });
+const buildTree = (data1, data2) => {
+  const keys = Object.keys({ ...data1, ...data2 });
   const sortedKeys = _.sortBy(keys);
   return sortedKeys.map((key) => {
-    if (!_.has(obj1, key)) {
-      return { type: 'add', key, val: obj2[key] };
+    const value1 = data1[key];
+    const value2 = data2[key];
+    if (!_.has(data1, key)) {
+      return { type: 'add', key, val: value2 };
     }
-    if (!_.has(obj2, key)) {
-      return { type: 'remove', key, val: obj1[key] };
+    if (!_.has(data2, key)) {
+      return { type: 'remove', key, val: value1 };
     }
-    if (_.isPlainObject(obj1[key]) && _.isPlainObject(obj2[key])) {
-      return { type: 'recursion', key, children: buildTree(obj1[key], obj2[key]) };
+    if (_.isPlainObject(value1) && _.isPlainObject(value2)) {
+      return { type: 'recursion', key, children: buildTree(value1, value2) };
     }
-    if (!_.isEqual(obj1[key], obj2[key])) {
+    if (!_.isEqual(value1, value2)) {
       return {
-        type: 'updated', key, val1: obj1[key], val2: obj2[key],
+        type: 'updated', key, val1: value1, val2: value2,
       };
     }
-    return { type: 'same', key, val: obj1[key] };
+    return { type: 'same', key, val: value1 };
   });
 };
 
