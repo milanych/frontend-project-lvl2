@@ -1,5 +1,4 @@
 import stylish from './stylish.js';
-import json from './json.js';
 import plain from './plain.js';
 
 export default (getDiff, format) => {
@@ -10,7 +9,7 @@ export default (getDiff, format) => {
     return plain(getDiff);
   }
   if (format === 'json') {
-    return json(getDiff);
+    return JSON.stringify(getDiff);
   }
   throw new Error(`Формат не поддерживается: ${format}`);
 };
