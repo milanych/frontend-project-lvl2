@@ -1,12 +1,12 @@
-const stringify = (obj) => {
-  if (typeof obj === 'object' && obj !== null) {
+const stringify = (value) => {
+  if (typeof value === 'object' && value !== null) {
     return '[complex value]';
-  } if (typeof obj === 'string') {
-    return `'${obj}'`;
-  } if (obj === null) {
+  } if (typeof value === 'string') {
+    return `'${value}'`;
+  } if (value === null) {
     return null;
   }
-  return obj;
+  return String(value);
 };
 
 const plain = (innerTree) => {
@@ -27,7 +27,7 @@ const plain = (innerTree) => {
           throw new Error(`Такого типа не существует ${node.type}`);
       }
     }).join('\n');
-  return `${format(innerTree, 0)}`;
+  return format(innerTree, 0);
 };
 
 export default plain;

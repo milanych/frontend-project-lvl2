@@ -1,41 +1,37 @@
-const currentIndent = (depth, intend = 4) => ' '.repeat(intend + depth);
-const stringify = (someEntity, spaceCount) => {
-  const iter = (current, depth) => {
-    if (typeof current !== 'object') {
-      return `${current}`;
-    }
-    if (current === null) { return null; }
-    const lines = Object
-      .entries(current)
-      .map(([key, value]) => `${currentIndent(depth + 4)}${key}: ${iter(value, depth + 4)}`);
-    return [
-      '{',
-      ...lines,
-      `${currentIndent(depth)}}`,
-    ].join('\n');
-  };
-
-  return iter(someEntity, spaceCount);
+const indent = (depth, spaceCount = 4) => ' '.repeat(spaceCount + depth);
+const stringify = (data, treeDepth) => {
+  if (typeof data !== 'object') {
+    return `${data}`;
+  }
+  if (data === null) { return null; }
+  const lines = Object
+    .entries(data)
+    .map(([key, value]) => `${indent(treeDepth + 4)}${key}: ${stringify(value, treeDepth + 4)}`);
+  return [
+    '{',
+    ...lines,
+    `${indent(treeDepth)}}`,
+  ].join('\n');
 };
-
-const stylish = (data) => {
+const stylish = (innerTree) => {
   const iter = (tree, depth) => tree.map((node) => {
+    const getValue = (value, sign) => `${indent(depth - 2)}${sign} ${node.key}: ${stringify(value, depth)}\n`;
     switch (node.type) {
       case 'add':
-        return `${currentIndent(depth - 2)}+ ${node.key}: ${stringify(node.val, depth)}\n`;
+        return getValue(node.val, '+');
       case 'remove':
-        return `${currentIndent(depth - 2)}- ${node.key}: ${stringify(node.val, depth)}\n`;
+        return getValue(node.val, '-');
       case 'same':
-        return `${currentIndent(depth - 2)}  ${node.key}: ${stringify(node.val, depth)}\n`;
+        return getValue(node.val, ' ');
       case 'updated':
-        return `${currentIndent(depth - 2)}- ${node.key}: ${stringify(node.val1, depth)}\n${currentIndent(depth - 2)}+ ${node.key}: ${stringify(node.val2, depth)}\n`;
+        return `${getValue(node.val1, '-')}${getValue(node.val2, '+')}`;
       case 'recursion':
-        return `${currentIndent(depth)}${node.key}: {\n${iter(node.children, depth + 4).join('')}${currentIndent(depth)}}\n`;
+        return `${indent(depth)}${node.key}: {\n${iter(node.children, depth + 4).join('')}${indent(depth)}}\n`;
       default:
         throw new Error(`Этого типа не существует: ${node.type}`);
     }
   });
-  return `{\n${iter(data, 0).join('')}}`;
+  return `{\n${iter(innerTree, 0).join('')}}`;
 };
 
 export default stylish;
